@@ -1,0 +1,1 @@
+var ilnAngularWp = angular.module('ilnAngularWp', []);
