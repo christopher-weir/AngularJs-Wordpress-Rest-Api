@@ -1,7 +1,7 @@
 'use strict';
 
 ilnAngularWp
-.factory('$ilnCore', [
+.factory('$ilnWpCore', [
 
 
     '$http',

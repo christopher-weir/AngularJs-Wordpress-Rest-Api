@@ -8,13 +8,13 @@
  * A service to return pages from the wp db
  */
 ilnAngularWp
-.factory('$ilnPages', [
+.factory('$ilnWpPages', [
 
 
     '$http',
-    '$ilnCore',
+    '$ilnWpCore',
 
-    function( $http, $ilnCore ) {
+    function( $http, $ilnWpCore ) {
 
         return  {
 
@@ -32,7 +32,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnCore.getJsonUrl() + 'posts/' + _id
+                    url     : $ilnWpCore.getJsonUrl() + 'posts/' + _id
 
                 }).
                 success( function( _data ) {
@@ -56,7 +56,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnCore.getJsonUrl() + 'posts?type[]=page'
+                    url     : $ilnWpCore.getJsonUrl() + 'posts?type[]=page'
 
                 }).
                 success( function( _data ) {

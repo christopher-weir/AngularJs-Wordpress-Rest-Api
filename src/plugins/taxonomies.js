@@ -2,19 +2,19 @@
 
 /**
  * @ngdoc service
- * @name core.ilnTaxonomies
+ * @name core.ilnWpTaxonomies
  *
  * @description
  * A service to return the wordpress taxonomies being used
  */
 ilnAngularWp
-.factory('$ilnTaxonomies', [
+.factory('$ilnWpTaxonomies', [
 
 
     '$http',
-    '$ilnCore',
+    '$ilnWpCore',
 
-    function( $http, $ilnCore ) {
+    function( $http, $ilnWpCore ) {
 
         return  {
 
@@ -31,7 +31,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnCore.getJsonUrl() + 'taxonomies/category/terms'
+                    url     : $ilnWpCore.getJsonUrl() + 'taxonomies/category/terms'
 
                 }).
                 success( function( _data ) {
@@ -56,7 +56,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnCore.getJsonUrl() + 'taxonomies/' + _taxonomy + '/terms'
+                    url     : $ilnWpCore.getJsonUrl() + 'taxonomies/' + _taxonomy + '/terms'
 
                 }).
                 success( function( _data ) {
@@ -81,7 +81,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnCore.getJsonUrl() + 'taxonomies/' + _taxonomy
+                    url     : $ilnWpCore.getJsonUrl() + 'taxonomies/' + _taxonomy
 
                 }).
                 success( function( _data ) {
@@ -105,7 +105,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnCore.getJsonUrl() + 'taxonomies'
+                    url     : $ilnWpCore.getJsonUrl() + 'taxonomies'
 
                 }).
                 success( function( _data ) {

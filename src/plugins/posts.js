@@ -8,13 +8,13 @@
  * A service to return posts from the wp db
  */
 ilnAngularWp
-.factory('$ilnPosts', [
+.factory('$ilnWpPosts', [
 
 
     '$http',
-    '$ilnCore',
+    '$ilnWpCore',
 
-    function( $http, $ilnCore ) {
+    function( $http, $ilnWpCore ) {
 
         return  {
 
@@ -32,7 +32,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnCore.getJsonUrl() + 'posts?type[]=' + _slug
+                    url     : $ilnWpCore.getJsonUrl() + 'posts?type[]=' + _slug
 
                 }).
                 success( function( _data ) {
@@ -57,7 +57,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnCore.getJsonUrl() + 'posts?filter[category_name]=' + _slug
+                    url     : $ilnWpCore.getJsonUrl() + 'posts?filter[category_name]=' + _slug
 
                 }).
                 success( function( _data ) {
@@ -82,7 +82,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnCore.getJsonUrl() + 'posts/' + _id
+                    url     : $ilnWpCore.getJsonUrl() + 'posts/' + _id
 
                 }).
                 success( function( _data ) {
@@ -106,7 +106,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnCore.getJsonUrl() + 'posts'
+                    url     : $ilnWpCore.getJsonUrl() + 'posts'
 
                 }).
                 success( function( _data ) {
