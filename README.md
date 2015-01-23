@@ -14,8 +14,10 @@ A group of AngularJS services to interact with the [Wordpress REST API](http://w
 angular.module('MyApp', ['angular-wp-rest']);
 ```
 
-###Posts: $ilnWpPosts
 ============================
+
+###Posts: $ilnWpPosts
+
 Add $ilnWpPosts to your controller
 ```js
 .controller('ControllerName', [
@@ -31,8 +33,8 @@ Returns an array of all posts.
 
 e.g:
 ```js
-    $ilnWpPosts.getPosts( function( _posts ){
-        console.log( _posts );
+    $ilnWpPosts.getPosts( function( posts ){
+        console.log( posts );
     });
 ```
 
@@ -44,8 +46,8 @@ Returns a specific post by ID.
 
 e.g:
 ```js
-    $ilnWpPosts.getPostById( '1', function( _post ){
-        console.log( _post );
+    $ilnWpPosts.getPostById( '1', function( post ){
+        console.log( post );
     });
 ```
 
@@ -57,8 +59,8 @@ Returns posts in a category. Use the category slug.
 
 e.g:
 ```js
-    $ilnWpPosts.getPostByCategoryName( 'news', function( _post ){
-        console.log( _post );
+    $ilnWpPosts.getPostByCategoryName( 'news', function( posts ){
+        console.log( posts );
     });
 ```
 
@@ -70,7 +72,49 @@ Returns posts in a custom post type. Use the post type slug.
 
 e.g:
 ```js
-    $ilnWpPosts.getPostByCategoryName( 'custom_post_type', function( _post ){
-        console.log( _post );
+    $ilnWpPosts.getPostByCategoryName( 'custom_post_type', function( posts ){
+        console.log( posts );
     });
 ```
+
+============================
+
+###Pages: $ilnWpPages
+
+Add $ilnWpPosts to your controller
+```js
+.controller('ControllerName', [
+        '$scope',
+        '$ilnWpPages',
+        function ( $scope, $ilnWpPages ) { ...
+```
+
+
+#### $ilnWpPosts.getPages( callback )
+
+
+Returns all pages.
+
+e.g:
+```js
+    $ilnWpPosts.getPages( function( pages ){
+        console.log( pages );
+    });
+```
+
+
+#### $ilnWpPosts.getPageById( id, callback )
+
+
+Returns a page by id.
+
+e.g:
+```js
+    $ilnWpPosts.getPageById( '3', function( page ){
+        console.log( page );
+    });
+```
+
+
+
+

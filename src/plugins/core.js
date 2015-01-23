@@ -8,6 +8,7 @@ ilnAngularWp
 
     function( $http ) {
 
+        // cache the json url
         var jsonUrl = null;
 
         return  {
