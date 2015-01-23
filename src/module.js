@@ -1,1 +1,1 @@
-var ilnAngularWp = angular.module('ilnAngularWp', []);
+var ilnAngularWp = angular.module('angular-wp-rest', []);
