@@ -1,7 +1,7 @@
 AngularJs-Wordpress-Rest-Api
 ============================
 
-A group of AngularJS services to interact with the [Wordpress REST API](http://wp-api.org/)
+A group of AngularJS services to interact with the [Wordpress REST API](http://wp-api.org/) plugin.
 
 ## Usage:
 
@@ -14,12 +14,8 @@ A group of AngularJS services to interact with the [Wordpress REST API](http://w
 angular.module('MyApp', ['ilnAngularWp']);
 ```
 
-Services
-============================
-
-
 ##Posts: $ilnWpPosts
-
+============================
 Add $ilnWpPosts to your controller
 ```js
 .controller('ControllerName', [
@@ -30,7 +26,6 @@ Add $ilnWpPosts to your controller
 
 
 ### $ilnWpPosts.getPosts( callback )
------
 
 Returns an array of all posts.
 
@@ -43,7 +38,7 @@ e.g:
 
 
 ### $ilnWpPosts.getPostById( id, callback )
------
+
 
 Returns a specific post by ID.
 
@@ -56,7 +51,7 @@ e.g:
 
 
 ### $ilnWpPosts.getPostByCategoryName( slug, callback )
------
+
 
 Returns posts in a category. Use the category slug.
 
@@ -69,7 +64,7 @@ e.g:
 
 
 ### $ilnWpPosts.getCustomPostType( slug, callback )
------
+
 
 Returns posts in a custom post type. Use the post type slug.
 
