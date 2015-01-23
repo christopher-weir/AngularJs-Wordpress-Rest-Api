@@ -9,12 +9,12 @@ A group of AngularJS services to interact with the [Wordpress REST API](http://w
 ```html
 <script src="angular-wp-rest.min.js"></script>
 ```
- - Add a dependency to the `ilnAngularWp` module in your application.
+ - Add a dependency to the `angular-wp-rest` module in your application.
 ```js
-angular.module('MyApp', ['ilnAngularWp']);
+angular.module('MyApp', ['angular-wp-rest']);
 ```
 
-##Posts: $ilnWpPosts
+###Posts: $ilnWpPosts
 ============================
 Add $ilnWpPosts to your controller
 ```js
@@ -25,7 +25,7 @@ Add $ilnWpPosts to your controller
 ```
 
 
-### $ilnWpPosts.getPosts( callback )
+#### $ilnWpPosts.getPosts( callback )
 
 Returns an array of all posts.
 
@@ -37,7 +37,7 @@ e.g:
 ```
 
 
-### $ilnWpPosts.getPostById( id, callback )
+#### $ilnWpPosts.getPostById( id, callback )
 
 
 Returns a specific post by ID.
@@ -50,7 +50,7 @@ e.g:
 ```
 
 
-### $ilnWpPosts.getPostByCategoryName( slug, callback )
+#### $ilnWpPosts.getPostByCategoryName( slug, callback )
 
 
 Returns posts in a category. Use the category slug.
@@ -63,7 +63,7 @@ e.g:
 ```
 
 
-### $ilnWpPosts.getCustomPostType( slug, callback )
+#### $ilnWpPosts.getCustomPostType( slug, callback )
 
 
 Returns posts in a custom post type. Use the post type slug.
