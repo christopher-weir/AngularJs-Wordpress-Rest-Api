@@ -115,6 +115,70 @@ e.g:
     });
 ```
 
+============================
+
+###Taxonomies: $ilnWpTaxonomies
+
+Add $ilnWpTaxonomies to your controller
+```js
+.controller('ControllerName', [
+        '$scope',
+        '$ilnWpTaxonomies',
+        function ( $scope, $ilnWpTaxonomies ) { ...
+```
+
+
+#### $ilnWpTaxonomies.getTaxonomies( callback )
+
+
+Returns all taxonomies in the site.
+
+e.g:
+```js
+    $ilnWpTaxonomies.getTaxonomies( function( taxonomies ){
+        console.log( taxonomies );
+    });
+```
+
+
+#### $ilnWpTaxonomies.getTaxonomy( taxonomy, callback )
+
+
+Returns a specific taxonomy.
+
+e.g:
+```js
+    $ilnWpTaxonomies.getTaxonomy( 'custom_taxonomy', function( taxonomy ){
+        console.log( taxonomy );
+    });
+```
+
+
+#### $ilnWpTaxonomies.getTaxonomyTerms( taxonomy, callback )
+
+
+Returns the terms of a custom taxonomy.
+
+e.g:
+```js
+    $ilnWpTaxonomies.getTaxonomyTerms( 'custom_taxonomy', function( terms ){
+        console.log( terms );
+    });
+```
+
+
+#### $ilnWpTaxonomies.getCategories( callback )
+
+
+Returns all categories in the site.
+
+e.g:
+```js
+    $ilnWpTaxonomies.getCategories( function( categories ){
+        console.log( categories );
+    });
+```
+
 
 
 
