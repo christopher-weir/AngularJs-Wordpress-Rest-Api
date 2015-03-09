@@ -16,165 +16,165 @@ angular.module('MyApp', ['angular-wp-rest']);
 
 ============================
 
-###Posts: $ilnWpPosts
+###Posts: ilnWpPosts
 
-Add $ilnWpPosts to your controller
+Add ilnWpPosts to your controller
 ```js
 .controller('ControllerName', [
         '$scope',
-        '$ilnWpPosts',
-        function ( $scope, $ilnWpPosts ) { ...
+        'ilnWpPosts',
+        function ( $scope, ilnWpPosts ) { ...
 ```
 
 
-#### $ilnWpPosts.getPosts( callback )
+#### ilnWpPosts.getPosts( callback )
 
 Returns an array of all posts.
 
 e.g:
 ```js
-    $ilnWpPosts.getPosts( function( posts ){
+    ilnWpPosts.getPosts( function( posts ){
         console.log( posts );
     });
 ```
 
 
-#### $ilnWpPosts.getPostById( id, callback )
+#### ilnWpPosts.getPostById( id, callback )
 
 
 Returns a specific post by ID.
 
 e.g:
 ```js
-    $ilnWpPosts.getPostById( '1', function( post ){
+    ilnWpPosts.getPostById( '1', function( post ){
         console.log( post );
     });
 ```
 
 
-#### $ilnWpPosts.getPostByCategoryName( slug, callback )
+#### ilnWpPosts.getPostByCategoryName( slug, callback )
 
 
 Returns posts in a category. Use the category slug.
 
 e.g:
 ```js
-    $ilnWpPosts.getPostByCategoryName( 'news', function( posts ){
+    ilnWpPosts.getPostByCategoryName( 'news', function( posts ){
         console.log( posts );
     });
 ```
 
 
-#### $ilnWpPosts.getCustomPostType( slug, callback )
+#### ilnWpPosts.getCustomPostType( slug, callback )
 
 
 Returns posts in a custom post type. Use the post type slug.
 
 e.g:
 ```js
-    $ilnWpPosts.getPostByCategoryName( 'custom_post_type', function( posts ){
+    ilnWpPosts.getPostByCategoryName( 'custom_post_type', function( posts ){
         console.log( posts );
     });
 ```
 
 ============================
 
-###Pages: $ilnWpPages
+###Pages: ilnWpPages
 
-Add $ilnWpPosts to your controller
+Add ilnWpPosts to your controller
 ```js
 .controller('ControllerName', [
         '$scope',
-        '$ilnWpPages',
-        function ( $scope, $ilnWpPages ) { ...
+        'ilnWpPages',
+        function ( $scope, ilnWpPages ) { ...
 ```
 
 
-#### $ilnWpPosts.getPages( callback )
+#### ilnWpPosts.getPages( callback )
 
 
 Returns all pages.
 
 e.g:
 ```js
-    $ilnWpPosts.getPages( function( pages ){
+    ilnWpPosts.getPages( function( pages ){
         console.log( pages );
     });
 ```
 
 
-#### $ilnWpPosts.getPageById( id, callback )
+#### ilnWpPosts.getPageById( id, callback )
 
 
 Returns a page by id.
 
 e.g:
 ```js
-    $ilnWpPosts.getPageById( '3', function( page ){
+    ilnWpPosts.getPageById( '3', function( page ){
         console.log( page );
     });
 ```
 
 ============================
 
-###Taxonomies: $ilnWpTaxonomies
+###Taxonomies: ilnWpTaxonomies
 
-Add $ilnWpTaxonomies to your controller
+Add ilnWpTaxonomies to your controller
 ```js
 .controller('ControllerName', [
         '$scope',
-        '$ilnWpTaxonomies',
-        function ( $scope, $ilnWpTaxonomies ) { ...
+        'ilnWpTaxonomies',
+        function ( $scope, ilnWpTaxonomies ) { ...
 ```
 
 
-#### $ilnWpTaxonomies.getTaxonomies( callback )
+#### ilnWpTaxonomies.getTaxonomies( callback )
 
 
 Returns all taxonomies in the site.
 
 e.g:
 ```js
-    $ilnWpTaxonomies.getTaxonomies( function( taxonomies ){
+    ilnWpTaxonomies.getTaxonomies( function( taxonomies ){
         console.log( taxonomies );
     });
 ```
 
 
-#### $ilnWpTaxonomies.getTaxonomy( taxonomy, callback )
+#### ilnWpTaxonomies.getTaxonomy( taxonomy, callback )
 
 
 Returns a specific taxonomy.
 
 e.g:
 ```js
-    $ilnWpTaxonomies.getTaxonomy( 'custom_taxonomy', function( taxonomy ){
+    ilnWpTaxonomies.getTaxonomy( 'custom_taxonomy', function( taxonomy ){
         console.log( taxonomy );
     });
 ```
 
 
-#### $ilnWpTaxonomies.getTaxonomyTerms( taxonomy, callback )
+#### ilnWpTaxonomies.getTaxonomyTerms( taxonomy, callback )
 
 
 Returns the terms of a custom taxonomy.
 
 e.g:
 ```js
-    $ilnWpTaxonomies.getTaxonomyTerms( 'custom_taxonomy', function( terms ){
+    ilnWpTaxonomies.getTaxonomyTerms( 'custom_taxonomy', function( terms ){
         console.log( terms );
     });
 ```
 
 
-#### $ilnWpTaxonomies.getCategories( callback )
+#### ilnWpTaxonomies.getCategories( callback )
 
 
 Returns all categories in the site.
 
 e.g:
 ```js
-    $ilnWpTaxonomies.getCategories( function( categories ){
+    ilnWpTaxonomies.getCategories( function( categories ){
         console.log( categories );
     });
 ```
