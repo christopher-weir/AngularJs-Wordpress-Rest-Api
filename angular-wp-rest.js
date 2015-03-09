@@ -7,7 +7,7 @@ var ilnAngularWp = angular.module('angular-wp-rest', []);
  * Gets the correct json url from the plugin
  */
 ilnAngularWp
-.factory('$ilnWpCore', [
+.factory('ilnWpCore', [
 
 
     '$http',
@@ -31,10 +31,7 @@ ilnAngularWp
 
         };
     }
-])
-
-
-;
+]);
 
 /**
  * @ngdoc service
@@ -44,13 +41,13 @@ ilnAngularWp
  * A service to return pages from the wp db
  */
 ilnAngularWp
-.factory('$ilnWpPages', [
+.factory('ilnWpPages', [
 
 
     '$http',
-    '$ilnWpCore',
+    'ilnWpCore',
 
-    function( $http, $ilnWpCore ) {
+    function( $http, ilnWpCore ) {
 
         return  {
 
@@ -68,7 +65,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnWpCore.getJsonUrl() + 'posts/' + _id
+                    url     : ilnWpCore.getJsonUrl() + 'posts/' + _id
 
                 }).
                 success( function( _data ) {
@@ -92,7 +89,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnWpCore.getJsonUrl() + 'posts?type[]=page'
+                    url     : ilnWpCore.getJsonUrl() + 'posts?type[]=page'
 
                 }).
                 success( function( _data ) {
@@ -105,10 +102,7 @@ ilnAngularWp
 
         };
     }
-])
-
-
-;
+]);
 
 /**
  * @ngdoc service
@@ -118,13 +112,13 @@ ilnAngularWp
  * A service to return posts from the wp db
  */
 ilnAngularWp
-.factory('$ilnWpPosts', [
+.factory('ilnWpPosts', [
 
 
     '$http',
-    '$ilnWpCore',
+    'ilnWpCore',
 
-    function( $http, $ilnWpCore ) {
+    function( $http, ilnWpCore ) {
 
         return  {
 
@@ -142,7 +136,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnWpCore.getJsonUrl() + 'posts?type[]=' + _slug
+                    url     : ilnWpCore.getJsonUrl() + 'posts?type[]=' + _slug
 
                 }).
                 success( function( _data ) {
@@ -167,7 +161,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnWpCore.getJsonUrl() + 'posts?filter[category_name]=' + _slug
+                    url     : ilnWpCore.getJsonUrl() + 'posts?filter[category_name]=' + _slug
 
                 }).
                 success( function( _data ) {
@@ -192,7 +186,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnWpCore.getJsonUrl() + 'posts/' + _id
+                    url     : ilnWpCore.getJsonUrl() + 'posts/' + _id
 
                 }).
                 success( function( _data ) {
@@ -216,7 +210,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnWpCore.getJsonUrl() + 'posts'
+                    url     : ilnWpCore.getJsonUrl() + 'posts'
 
                 }).
                 success( function( _data ) {
@@ -229,10 +223,7 @@ ilnAngularWp
 
         };
     }
-])
-
-
-;
+]);
 
 /**
  * @ngdoc service
@@ -242,13 +233,13 @@ ilnAngularWp
  * A service to return the wordpress taxonomies being used
  */
 ilnAngularWp
-.factory('$ilnWpTaxonomies', [
+.factory('ilnWpTaxonomies', [
 
 
     '$http',
-    '$ilnWpCore',
+    'ilnWpCore',
 
-    function( $http, $ilnWpCore ) {
+    function( $http, ilnWpCore ) {
 
         return  {
 
@@ -265,7 +256,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnWpCore.getJsonUrl() + 'taxonomies/category/terms'
+                    url     : ilnWpCore.getJsonUrl() + 'taxonomies/category/terms'
 
                 }).
                 success( function( _data ) {
@@ -290,7 +281,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnWpCore.getJsonUrl() + 'taxonomies/' + _taxonomy + '/terms'
+                    url     : ilnWpCore.getJsonUrl() + 'taxonomies/' + _taxonomy + '/terms'
 
                 }).
                 success( function( _data ) {
@@ -315,7 +306,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnWpCore.getJsonUrl() + 'taxonomies/' + _taxonomy
+                    url     : ilnWpCore.getJsonUrl() + 'taxonomies/' + _taxonomy
 
                 }).
                 success( function( _data ) {
@@ -339,7 +330,7 @@ ilnAngularWp
                 $http({
 
                     method  : 'GET',
-                    url     : $ilnWpCore.getJsonUrl() + 'taxonomies'
+                    url     : ilnWpCore.getJsonUrl() + 'taxonomies'
 
                 }).
                 success( function( _data ) {
@@ -352,7 +343,4 @@ ilnAngularWp
 
         };
     }
-])
-
-
-;
+]);
