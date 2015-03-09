@@ -1,6 +1,11 @@
-var ilnAngularWp = angular.module('ilnAngularWp', []);
-'use strict';
-
+var ilnAngularWp = angular.module('angular-wp-rest', []);
+/**
+ * @ngdoc service
+ * @name core
+ *
+ * @description
+ * Gets the correct json url from the plugin
+ */
 ilnAngularWp
 .factory('$ilnWpCore', [
 
@@ -9,6 +14,7 @@ ilnAngularWp
 
     function( $http ) {
 
+        // cache the json url
         var jsonUrl = null;
 
         return  {
@@ -29,8 +35,6 @@ ilnAngularWp
 
 
 ;
-
-'use strict';
 
 /**
  * @ngdoc service
@@ -105,8 +109,6 @@ ilnAngularWp
 
 
 ;
-
-'use strict';
 
 /**
  * @ngdoc service
@@ -231,8 +233,6 @@ ilnAngularWp
 
 
 ;
-
-'use strict';
 
 /**
  * @ngdoc service
